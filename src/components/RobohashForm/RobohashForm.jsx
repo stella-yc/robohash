@@ -20,8 +20,12 @@ export class RobohashForm extends PureComponent {
     this.setState({ typedValue });
   }
 
-  handleSubmit() {
-    alert("Submitted!");
+  handleSubmit(e) {
+    e.preventDefault();
+    const { typedValue } = this.state;
+    const { handleSubmit } = this.props;
+    handleSubmit(typedValue);
+    this.setState({ typedValue: "" });
   }
 
   render() {
@@ -38,3 +42,7 @@ export class RobohashForm extends PureComponent {
     );
   }
 }
+
+RobohashForm.propTypes = {
+  handleSubmit: PropTypes.func.isRequired
+};

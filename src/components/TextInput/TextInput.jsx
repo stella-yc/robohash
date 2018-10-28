@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 
 export class TextInput extends PureComponent {
   render() {
-    const { handleInputChange, typedValue, placeholder } = this.props;
+    const { onChange, value, placeholder } = this.props;
     return (
       <div>
         <input
           type="text"
           placeholder={placeholder}
-          onChange={handleInputChange}
-          value={typedValue}
+          onChange={onChange}
+          value={value}
         />
       </div>
     );
@@ -18,12 +18,12 @@ export class TextInput extends PureComponent {
 }
 
 TextInput.propTypes = {
-  handleInputChange: PropTypes.func,
-  typedValue: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
+  value: PropTypes.string.isRequired,
   placeholder: PropTypes.string
 };
 
 TextInput.defaultProps = {
-  handleInputChange: () => {},
+  onChange: () => {},
   placeholder: ""
 };
