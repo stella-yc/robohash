@@ -26,6 +26,9 @@ export class TextInput extends PureComponent {
           onChange={this.handleInputChange}
           value={typedValue}
         />
+        <button type="submit">
+          <span>Submit</span>
+        </button>
       </div>
     );
   }
