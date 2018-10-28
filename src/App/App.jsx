@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Header } from "../components/Header/Header";
-import { TextInput } from "../components/TextInput/TextInput";
+import { RobohashForm } from "../components/RobohashForm/RobohashForm";
 import styles from "./App.module.css";
 
 export const App = () => (
@@ -9,7 +9,7 @@ export const App = () => (
     <Header />
     <body>
       <div>
-        <TextInput />
+        <RobohashForm />
       </div>
     </body>
   </div>
