@@ -7,6 +7,7 @@ export class TextInput extends PureComponent {
     return (
       <div>
         <input
+          className="text-input"
           type="text"
           placeholder={placeholder}
           onChange={onChange}
