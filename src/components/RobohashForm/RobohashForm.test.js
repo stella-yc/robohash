@@ -14,7 +14,7 @@ it("updates state with entered text as user is typing", () => {
   const roboform = mount(<RobohashForm handleSubmit={() => ({})} />);
 
   roboform
-    .find("input.text-input")
+    .find("input.textInput")
     .first()
     .simulate("change", { target: { value: "cats" } });
 
@@ -46,7 +46,7 @@ describe("when `handleSubmit` is invoked,", () => {
     roboform = mount(<RobohashForm handleSubmit={handleSubmitSpy} />);
 
     roboform
-      .find("input.text-input")
+      .find("input.textInput")
       .first()
       .simulate("change", { target: { value: "cats" } });
 
