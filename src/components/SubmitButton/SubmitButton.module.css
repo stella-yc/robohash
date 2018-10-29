@@ -1,0 +1,21 @@
+.submitButton {
+  margin-left: 4em;
+  background-color: #705555;
+  color: white;
+  border: none;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 9px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 1px #fff;
+  transition: All 250ms ease;
+  outline: none;
+}
+
+.submitButton:active {
+  position: relative;
+  top: 5px;
+  /* background-color: #3e8e41; */
+  box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(4px);
+  transition: All 250ms ease;
+}

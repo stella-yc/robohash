@@ -1,13 +1,15 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 
+import styles from "./TextInput.module.css";
+
 export class TextInput extends PureComponent {
   render() {
     const { onChange, value, placeholder } = this.props;
     return (
       <div>
         <input
-          className="text-input"
+          className={styles.textInput}
           type="text"
           placeholder={placeholder}
           onChange={onChange}

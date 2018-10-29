@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import { SubmitButton } from "../SubmitButton/SubmitButton";
 import { TextInput } from "../TextInput/TextInput";
+import styles from "./RobohashForm.module.css";
 
 export class RobohashForm extends PureComponent {
   constructor(props) {
@@ -31,7 +32,7 @@ export class RobohashForm extends PureComponent {
   render() {
     const { typedValue, isSubmitting } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className={styles.roboform}>
         <TextInput
           placeholder="Enter any text!"
           onChange={this.handleInputChange}

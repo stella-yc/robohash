@@ -1,8 +1,8 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import styles from "./Header.module.css";
 
 export const Header = () => (
   <header>
-    <h1>Build-a-Robot Workshop</h1>
+    <h1 className={styles.title}>Build-a-Robot Workshop</h1>
   </header>
 );
