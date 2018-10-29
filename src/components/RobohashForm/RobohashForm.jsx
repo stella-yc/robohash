@@ -25,7 +25,7 @@ export class RobohashForm extends PureComponent {
     const { typedValue } = this.state;
     const { handleSubmit } = this.props;
     handleSubmit(typedValue);
-    this.setState({ typedValue: "", isSubmitting: true });
+    this.setState({ typedValue: "" });
   }
 
   render() {

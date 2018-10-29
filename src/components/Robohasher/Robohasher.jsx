@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 
 import { RobohashForm } from "../RobohashForm/RobohashForm";
+import { RobotDisplay } from "../RobotDisplay/RobotDisplay";
 
 export class Robohasher extends PureComponent {
   constructor(props) {
@@ -20,12 +21,7 @@ export class Robohasher extends PureComponent {
     return (
       <div>
         <RobohashForm handleSubmit={this.updateUserInput} />
-        {userInput && (
-          <div>
-            <h2>{userInput}</h2>
-            <img src={`https://robohash.org/${userInput}`} alt="custom-robot" />
-          </div>
-        )}
+        <RobotDisplay userInput={userInput} />
       </div>
     );
   }
