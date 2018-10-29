@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 
 import { RobohashForm } from "../RobohashForm/RobohashForm";
 import { RobotDisplay } from "../RobotDisplay/RobotDisplay";
+import styles from "./Robohasher.module.css";
 
 export class Robohasher extends PureComponent {
   constructor(props) {
@@ -19,7 +20,7 @@ export class Robohasher extends PureComponent {
   render() {
     const { userInput } = this.state;
     return (
-      <div>
+      <div className={styles.container}>
         <RobohashForm handleSubmit={this.updateUserInput} />
         <RobotDisplay userInput={userInput} />
       </div>
