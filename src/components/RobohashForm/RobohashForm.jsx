@@ -37,6 +37,7 @@ export class RobohashForm extends PureComponent {
           placeholder="Enter any text!"
           onChange={this.handleInputChange}
           value={typedValue}
+          disabled={isRobotLoaded}
         />
         <SubmitButton disabled={isRobotLoaded} />
       </form>

@@ -5,7 +5,7 @@ import styles from "./TextInput.module.css";
 
 export class TextInput extends PureComponent {
   render() {
-    const { onChange, value, placeholder } = this.props;
+    const { onChange, value, placeholder, disabled } = this.props;
     return (
       <div>
         <input
@@ -14,6 +14,7 @@ export class TextInput extends PureComponent {
           placeholder={placeholder}
           onChange={onChange}
           value={value}
+          disabled={disabled}
         />
       </div>
     );
@@ -23,10 +24,12 @@ export class TextInput extends PureComponent {
 TextInput.propTypes = {
   onChange: PropTypes.func,
   value: PropTypes.string.isRequired,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  disabled: PropTypes.bool
 };
 
 TextInput.defaultProps = {
   onChange: () => {},
-  placeholder: ""
+  placeholder: "",
+  disabled: false
 };
