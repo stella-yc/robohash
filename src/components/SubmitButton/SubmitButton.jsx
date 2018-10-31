@@ -5,7 +5,7 @@ import styles from "./SubmitButton.module.css";
 
 export const SubmitButton = ({ disabled }) => (
   <input
-    className={styles.submitButton}
+    className={disabled ? styles.disabledButton : styles.submitButton}
     type="submit"
     value="Make a Robot"
     disabled={disabled}

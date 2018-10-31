@@ -11,6 +11,18 @@
   font-size: 1.5em;
 }
 
+.disabledButton {
+  margin-left: 4em;
+  background-color: gray;
+  color: #d5d5d5;
+  border: none;
+  padding: 0.5em;
+  border-radius: 5px;
+  box-shadow: 0 9px rgba(0, 0, 0, 0.2);
+  transition: All 250ms ease;
+  outline: none;
+  font-size: 1.5em;
+}
 .submitButton:active {
   position: relative;
   top: 5px;

@@ -9,8 +9,7 @@ export class RobohashForm extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      typedValue: "",
-      isSubmitting: false
+      typedValue: ""
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,7 +29,8 @@ export class RobohashForm extends PureComponent {
   }
 
   render() {
-    const { typedValue, isSubmitting } = this.state;
+    const { typedValue } = this.state;
+    const { isRobotLoaded } = this.props;
     return (
       <form onSubmit={this.handleSubmit} className={styles.roboform}>
         <TextInput
@@ -38,12 +38,13 @@ export class RobohashForm extends PureComponent {
           onChange={this.handleInputChange}
           value={typedValue}
         />
-        <SubmitButton disabled={isSubmitting} />
+        <SubmitButton disabled={isRobotLoaded} />
       </form>
     );
   }
 }
 
 RobohashForm.propTypes = {
-  handleSubmit: PropTypes.func.isRequired
+  handleSubmit: PropTypes.func.isRequired,
+  isRobotLoaded: PropTypes.bool.isRequired
 };

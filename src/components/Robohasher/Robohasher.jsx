@@ -8,21 +8,33 @@ export class Robohasher extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      userInput: ""
+      userInput: "",
+      isRobotLoaded: false
     };
     this.updateUserInput = this.updateUserInput.bind(this);
+    this.updateRobotIsLoaded = this.updateRobotIsLoaded.bind(this);
   }
 
   updateUserInput(userInput) {
     this.setState({ userInput });
   }
 
+  updateRobotIsLoaded(isRobotLoaded) {
+    this.setState({ isRobotLoaded });
+  }
+
   render() {
-    const { userInput } = this.state;
+    const { userInput, isRobotLoaded } = this.state;
     return (
       <div className={styles.container}>
-        <RobohashForm handleSubmit={this.updateUserInput} />
-        <RobotDisplay userInput={userInput} />
+        <RobohashForm
+          handleSubmit={this.updateUserInput}
+          isRobotLoaded={isRobotLoaded}
+        />
+        <RobotDisplay
+          userInput={userInput}
+          updateRobotIsLoaded={this.updateRobotIsLoaded}
+        />
       </div>
     );
   }
