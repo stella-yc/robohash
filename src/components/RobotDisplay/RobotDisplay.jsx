@@ -56,7 +56,7 @@ export class RobotDisplay extends PureComponent {
         <div className={styles.robotContainer}>
           {userInput &&
             showRobot && (
-              <div>
+              <div className={styles.lightbeam}>
                 <img
                   ref={this.image}
                   className={styles[imageClass]}
