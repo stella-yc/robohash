@@ -5,10 +5,11 @@ import styles from "./RobotList.module.css";
 
 export const RobotList = ({ robots }) => {
   const showList = robots && robots.length;
+  const robotsToShow = robots.slice(0, -1);
   return (
     <div className={styles.robotList}>
       {showList
-        ? robots.map(robot => (
+        ? robotsToShow.map(robot => (
             <div>
               <img
                 className={styles.robotImg}

@@ -1,7 +1,13 @@
 .title {
   color: white;
   margin-top: 0;
-  padding: 1em 0;
+  padding: 1em 0 0 0;
   font-family: "Righteous", cursive;
   height: 10%;
+}
+
+.author {
+  color: white;
+  font-family: "Righteous", cursive;
+  margin-bottom: 2em;
 }
