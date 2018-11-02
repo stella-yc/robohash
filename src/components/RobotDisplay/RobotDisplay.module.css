@@ -34,10 +34,15 @@
 
 .robotContainer {
   background-color: white;
-  height: 60%;
+  height: 50%;
   overflow: hidden;
   position: relative;
   border-radius: 7px;
+}
+
+.robot--before-fade-in,
+.robot--fade-in {
+  height: 100%;
 }
 
 .robot--before-fade-in > img {
@@ -52,6 +57,7 @@
 }
 
 .robot--fade-in > img {
+  height: 100%;
   opacity: 1;
   transition-delay: 2s;
   transition: all 2s ease-in;

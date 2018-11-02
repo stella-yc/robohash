@@ -1,0 +1,15 @@
+.robotList {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  background-color: #bc9fb6;
+  margin-top: 1em;
+  border-radius: 10px;
+}
+
+.robotImg {
+  width: auto;
+  height: 100px;
+}
