@@ -6,7 +6,7 @@ import { RobohashForm } from "./RobohashForm";
 
 it("renders without crashing", () => {
   const div = document.createElement("div");
-  ReactDOM.render(<RobohashForm />, div);
+  ReactDOM.render(<RobohashForm handleSubmit={() => ({})} />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 
