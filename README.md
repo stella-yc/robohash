@@ -1,6 +1,6 @@
 # Robohash-a-rama
 
-Make your own robot web app, using the `https://robohash.org/` API.
+Make your own robot web app, using the `https://robohash.org/` API and `create-react-app`
 
 - User types into text input and submits.
 - A robot appears!
