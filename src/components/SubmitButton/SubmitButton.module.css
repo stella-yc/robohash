@@ -1,14 +1,16 @@
 .submitButton {
-  margin-left: 4em;
-  background-color: #705555;
+  margin-left: 2em;
+  background-color: #930d79;
   color: white;
   border: none;
   padding: 0.5em;
   border-radius: 5px;
-  box-shadow: 0 9px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 9px rgba(82, 8, 68, 0.6);
   transition: All 250ms ease;
   outline: none;
   font-size: 1.5em;
+  position: relative;
+  top: -5px;
 }
 
 .disabledButton {
@@ -25,8 +27,8 @@
 }
 .submitButton:active {
   position: relative;
-  top: 5px;
-  /* background-color: #3e8e41; */
+  top: 0px;
+  background-color: #c812a4;
   box-shadow: 0 5px rgba(0, 0, 0, 0.2);
   transform: translateY(4px);
   transition: All 250ms ease;

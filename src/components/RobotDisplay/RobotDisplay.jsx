@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 
 import styles from "./RobotDisplay.module.css";
+import { FlashingLight } from "../FlashingLight/FlashingLight";
 
 export class RobotDisplay extends PureComponent {
   constructor() {
@@ -41,6 +42,7 @@ export class RobotDisplay extends PureComponent {
     return (
       <div className={styles.container}>
         <div className={styles.displayControls}>
+          <FlashingLight />
           <h2 className={styles.userInput}>{renderRobot && userInput}</h2>
         </div>
         <div className={styles.robotContainer}>

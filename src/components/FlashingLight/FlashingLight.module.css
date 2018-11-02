@@ -1,0 +1,40 @@
+.flashingLight {
+  margin: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00e676;
+  animation: webcam 1000ms linear 800ms infinite;
+  display: inline-block;
+}
+
+.flashingLight--delay {
+  margin: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00e676;
+  animation: webcam 1000ms linear 1300ms infinite;
+  display: inline-block;
+}
+
+@keyframes webcam {
+  0% {
+    background: #000;
+  }
+  29% {
+    background: #000;
+  }
+  30% {
+    background: #00e676;
+  }
+  61% {
+    background: #00e676;
+  }
+  99% {
+    background: #000;
+  }
+  100% {
+    background: #000;
+  }
+}
