@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import styles from "./RobotDisplay.module.css";
 import { FlashingLight } from "../FlashingLight/FlashingLight";
+import { LightBeam } from "../LightBeam/LightBeam";
 
 export class RobotDisplay extends PureComponent {
   constructor() {
@@ -55,7 +56,7 @@ export class RobotDisplay extends PureComponent {
                   alt="custom-robot"
                   onLoad={this.startAnimation}
                 />
-                <div className={styles.lightbeam} />
+                <LightBeam />
               </div>
             )}
         </div>
