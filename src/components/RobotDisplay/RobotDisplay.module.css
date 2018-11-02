@@ -32,31 +32,6 @@
   overflow: hidden;
 }
 
-.clearRobot {
-  height: 50px;
-  margin-left: 1em;
-  background-color: #705555;
-  color: white;
-  border: none;
-  padding: 0.5em;
-  border-radius: 5px;
-  box-shadow: 0 9px rgba(0, 0, 0, 0.2);
-  transition: All 250ms ease;
-  outline: none;
-  font-size: 1.5em;
-  position: relative;
-  top: -10px;
-}
-
-.clearRobot:active {
-  position: relative;
-  top: -5px;
-  /* background-color: #3e8e41; */
-  box-shadow: 0 5px rgba(0, 0, 0, 0.2);
-  transform: translateY(4px);
-  transition: All 250ms ease;
-}
-
 .robotContainer {
   background-color: white;
   height: 60%;
@@ -66,7 +41,7 @@
   box-shadow: inset 0 0 5px #000000;
 }
 
-.image {
+.robot--before-fade-in > img {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -74,14 +49,14 @@
   transition-delay: 2s;
   opacity: 0;
   transition: all 1.8s ease-in;
-  /* animation: slide 0.5s forwards;
-  animation-delay: 2s; */
+  z-index: 1;
 }
 
-.image--after {
+.robot--fade-in > img {
   opacity: 1;
   transition-delay: 2s;
   transition: all 2s ease-in;
+  z-index: 1;
 }
 
 .lightbeam {
@@ -89,16 +64,21 @@
   animation-duration: 0.8s;
   animation-iteration-count: 3;
   animation-direction: alternate;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
 
 @keyframes flash {
   0% {
-    background-color: yellow;
+    background-color: rgba(255, 240, 0, 0.5);
   }
   50% {
-    background-color: orange;
+    background-color: rgba(255, 116, 0, 0.5);
   }
   100% {
-    background-color: red;
+    background-color: rgba(255, 46, 0, 0.5);
   }
 }
